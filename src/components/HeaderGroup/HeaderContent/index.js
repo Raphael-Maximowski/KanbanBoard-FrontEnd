@@ -28,12 +28,12 @@ export default function Header(){
             </div>
             <div className={'SearchBar'}>
                 <input placeholder={"Pesquise por Seções ou Tarefas"} />
-                <img src={'../../assets/HeaderContent/lupa.png'} />
+                <img src={'../../assets/Header/lupa.png'} />
                 <button onClick={ChangeModalState}>Criar Time</button>
             </div>
             <div className={'Profile'}>
-                    <img onClick={alert} className={'Notification'} src={'../../assets/HeaderContent/notificacao.png'}/>
-                    <img onClick={alert} className={'ProfilePicture'} src={'../../assets/HeaderContent/user.png'}/>
+                    <img onClick={alert} className={'Notification'} src={'../../assets/Header/notificacao.png'}/>
+                    <img onClick={alert} className={'ProfilePicture'} src={'../../assets/Header/user.png'}/>
             </div>
             <ModalNewTeam ModalState={ModalState} CloseModal={SetModalState}/>
             <ToastContainer />

@@ -3,7 +3,7 @@
     {
       "id" : 1,
       "name": "Status",
-      "path" : "../../assets/KanbanBoard/status.png",
+      "path" : "../../../assets/KanbanPage/status.png",
       "input" : "select",
       "selector" : [
         {
@@ -29,19 +29,19 @@
     {
       "id" : 3,
       "name": "Duração",
-      "path" : "../../assets/KanbanBoard/stopwatch.png",
+      "path" : "../../../assets/KanbanPage/stopwatch.png",
       "input" : "date"
     },
     {
       "id" : 4,
       "name": "Tags",
-      "path" : "../../assets/KanbanBoard/tag.png",
+      "path" : "../../../assets/KanbanPage/tag.png",
       "input" : "text"
     },
     {
       "id" : 5,
       "name": "Prioridade",
-      "path" : "../../assets/KanbanBoard/IconFlag.png",
+      "path" : "../../../assets/KanbanPage/IconFlag.png",
       "input" : "select",
       "selector" : [
         {
@@ -65,7 +65,7 @@
     {
       "id" : 6,
       "name": "Atribuições",
-      "path" : "../../assets/KanbanBoard/user-profile.png",
+      "path" : "../../../assets/KanbanPage//user-profile.png",
       "input" : "text"
     }
   ]
