@@ -1,9 +1,9 @@
 import './style.css'
 import {toast} from "react-toastify";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
-export default function SubTarefasSection(){
+export default function SubTarefasSection({SetterInfo, Active}){
 
     const [InputTask, ActiveInputTask] = useState(false)
     const [SubTarefas, SetSubTarefas] = useState('')
@@ -64,6 +64,15 @@ export default function SubTarefasSection(){
         const NewArray = SubTarefas.filter(Subtarefa => Subtarefa.id !== SubTarefa.id)
         SetSubTarefas(NewArray)
     }
+
+    useEffect(() => {
+        if (Active) {
+            const SubTask = {
+                    Subtasks: SubTarefas
+            }
+            SetterInfo(SubTask)
+        }
+    }, [Active]);
 
     return (
         <div className={'SubTarefas'}>

@@ -37,9 +37,22 @@ export default function ModalNewTask({ModalState, ChangeState}) {
     const [Task, SetValuesTask] = useState([])
 
     const [GetInpuSection, SetInpuSection] = useState({})
+    const [GetDescription, SetDescription] = useState({})
+    const [GetFiles, SetFiles] = useState({})
+    const [GetSubTasks, SetSubTask] = useState({})
+    const [GetValue, ActiveState] =  useState(false)
 
     function ShowInfo(){
-        console.log("Teste1", GetInpuSection)
+        ActiveState(!GetValue)
+
+        const FinalTask = [
+            GetInpuSection,
+            GetDescription,
+            GetFiles,
+            GetSubTasks
+        ]
+
+        console.log(FinalTask)
     }
 
     function ChangeModalState() {
@@ -89,12 +102,12 @@ export default function ModalNewTask({ModalState, ChangeState}) {
                                     <input onChange={HandleName} value={TaskName}/>
                                     <img onClick={ChangeModalState} src={'../../assets/KanbanPage/Cancel.png'}/>
                                 </div>
-                                <IconsInput  />
+                                <IconsInput SetterInfo={SetInpuSection} Active={GetValue} />
                             </div>
                             <div className={'MidTask'}>
-                                <DescriptionSection />
-                                <FilesSection />
-                                <SubTarefasSection/>
+                                <DescriptionSection SetterInfo={SetDescription} Active={GetValue} />
+                                <FilesSection SetterInfo={SetFiles} Active={GetValue} />
+                                <SubTarefasSection SetterInfo={SetSubTask} Active={GetValue}/>
                                 <div onClick={ShowInfo}>Teste</div>
                             </div>
                         </div>

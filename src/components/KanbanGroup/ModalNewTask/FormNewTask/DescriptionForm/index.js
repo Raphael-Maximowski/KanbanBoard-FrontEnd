@@ -1,12 +1,22 @@
 import './style.css'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
-export default function DescriptionSection(){
+export default function DescriptionSection({Active, SetterInfo}){
 
     const [Description, SetDescription] = useState("")
     function handleDescription(event) {
         SetDescription(event.target.value)
     }
+
+    useEffect(() => {
+        if (Active) {
+            const DescriptionValue = {
+                Description : Description
+            }
+
+            SetterInfo(DescriptionValue)
+        }
+    }, [Active]);
 
     return (
         <div className={'DescriptionArea'}>

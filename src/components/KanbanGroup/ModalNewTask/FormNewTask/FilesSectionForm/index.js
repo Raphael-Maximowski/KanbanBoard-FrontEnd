@@ -1,9 +1,9 @@
 import './style.css'
 import FilesContentInput from "../InputFiles";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import ModalImage from "../../ModalShowFIle";
 
-export default  function FilesSection(){
+export default  function FilesSection({SetterInfo, Active}){
     const [OpenFile, SetOpenFile] = useState(false)
     const [files, setFiles] = useState([]);
     const [ShowFile, SetShowFile] =  useState(undefined)
@@ -13,6 +13,16 @@ export default  function FilesSection(){
         console.log("Arquivo Escolhido", file)
         SetShowFile(file)
     }
+
+    useEffect(() => {
+        if (Active) {
+            const ContentFiles = {
+                    files: files
+            }
+
+            SetterInfo(ContentFiles)
+        }
+    }, [Active]);
 
     return (
         <div className={'Files'}>

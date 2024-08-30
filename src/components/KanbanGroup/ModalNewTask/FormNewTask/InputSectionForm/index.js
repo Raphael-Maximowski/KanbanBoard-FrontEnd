@@ -1,9 +1,9 @@
 import './style.css'
 import InputSection from "../InputType";
 import InputData from '../../../../../data/InputType.json'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
-export default function IconsInput() {
+export default function IconsInput({SetterInfo, Active}) {
 
     const Inputs = InputData
 
@@ -33,6 +33,23 @@ export default function IconsInput() {
         Atribuicao
     ]
 
+    useEffect(() => {
+        console.log("Ativado Use Effect")
+        if (Active) {
+            const InputValues =
+                {
+                        Status: Status,
+                        Data: Data,
+                        Time: Time,
+                        Tags: Tags,
+                        Prioridade: Prioridade,
+                        Atribuicao: Atribuicao,
+                }
+
+            SetterInfo(InputValues)
+        }
+
+    }, [Active]);
 
     return (
         <div className={'IconsContainer'}>
