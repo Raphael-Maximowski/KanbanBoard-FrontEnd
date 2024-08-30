@@ -22,14 +22,11 @@ export default function InputSection({data, setter, value}){
             })
         } else {
             SetInputMode(!InputMode)
-            console.log("Ativado!")
         }
-
     }
 
     function handleData(event) {
         setter(event.target.value)
-
     }
 
     function handleInputClick(event) {
@@ -67,9 +64,9 @@ export default function InputSection({data, setter, value}){
                                             }}
                                         />
                                         : <div >
-                                            <select value={value}  onChange={handleData} className={'select-box'}>
+                                            <select onClick={handleData} className={'select-box'}>
                                                 {options.map((option, index) => {
-                                                    return <option onClick={ActiveInput} value={option.name} key={index}>{option.name}</option>})}
+                                                    return <option value={option.name} key={index}>{option.name}</option>})}
                                             </select>
                                           </div>
                             }

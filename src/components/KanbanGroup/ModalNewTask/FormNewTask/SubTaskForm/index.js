@@ -6,7 +6,7 @@ import {useState} from "react";
 export default function SubTarefasSection(){
 
     const [InputTask, ActiveInputTask] = useState(false)
-    const [SubTarefas, SetSubTarefas] = useState([])
+    const [SubTarefas, SetSubTarefas] = useState('')
     const [NewSubTask, SetNewSubTask] = useState()
     const [CheckNewSubTask, SetCheckNewSubTask] = useState(false)
 
@@ -60,6 +60,11 @@ export default function SubTarefasSection(){
         SetSubTarefas(updateTask)
     }
 
+    function RemoveSubTask(SubTarefa) {
+        const NewArray = SubTarefas.filter(Subtarefa => Subtarefa.id !== SubTarefa.id)
+        SetSubTarefas(NewArray)
+    }
+
     return (
         <div className={'SubTarefas'}>
             <div className={'LabelHeader'}>
@@ -69,22 +74,22 @@ export default function SubTarefasSection(){
 
             {InputTask === true ? <div className={'InputSection'}>
                 <input onChange={handleCheckSubTask} type={"checkbox"}/>
-                <input onBlur={AddSubTask} onChange={handleSubTask} value={NewSubTask}
+                <input onBlur={AddSubTask} onChange={handleSubTask}
                        type={"text"} placeholder={"Insira o Título"}/>
             </div> : ''}
 
-            <div className={'CheckBox'}>
+            {SubTarefas !== '' ? <div className={'CheckBox'}>
                 {SubTarefas.map(SubTarefa => {
-                    return <div>
+                    return <div key={SubTarefa.id}>
                         <div className={'CheckBoxContainer'}>
-                            <img src={'../../assets/KanbanPage/CancelSubTask.png'}/>
+                            <img onClick={() => RemoveSubTask(SubTarefa)} src={'../../assets/KanbanPage/CancelSubTask.png'}/>
                             <input onChange={() => EditSubTaskState(SubTarefa)}
                                    defaultChecked={SubTarefa.checked} type={"checkbox"}/>
                             <p>{SubTarefa.name}</p>
                         </div>
                     </div>
                 })}
-            </div>
+            </div> : ''}
         </div>
     )
 }

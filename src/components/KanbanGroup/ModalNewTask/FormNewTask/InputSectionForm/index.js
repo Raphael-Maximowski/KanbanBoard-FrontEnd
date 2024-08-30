@@ -33,6 +33,7 @@ export default function IconsInput() {
         Atribuicao
     ]
 
+
     return (
         <div className={'IconsContainer'}>
             <div>

@@ -10,7 +10,7 @@ export default function ModalImage({State, ChangeState, data}) {
 
     function CloseModal(){
         ChangeState(!State)
-        data =  undefined
+
     }
 
     function Type() {
@@ -24,6 +24,7 @@ export default function ModalImage({State, ChangeState, data}) {
             || type === 'svg'
             || type === 'ebp') {
             SetType('Image')
+            console.log("Setado como Imagem")
         } else if (
             type === 'mp4'
             || type === 'ebm'
@@ -31,9 +32,8 @@ export default function ModalImage({State, ChangeState, data}) {
             || type === 'avi'
             || type === 'mov') {
             SetType('Video')
-        } else { SetType('PDF') }
-
-        console.log(FileType)
+            console.log("Setado como Video")
+        } else {SetType('PDF')}
     }
 
     const customStyles3 = {
@@ -56,7 +56,6 @@ export default function ModalImage({State, ChangeState, data}) {
         if (data !== undefined) {
             Type()
         }
-        console.log("Arquivo Chegou: ", data)
     })
 
     return (
@@ -66,10 +65,11 @@ export default function ModalImage({State, ChangeState, data}) {
                 style={customStyles3}
                 overlayClassName="custom-overlay3"
             >
+                {data !== undefined ?
                 <div className="AnimationContainer3">
                     <div className={'ButtonsFiles'}>
                         <div className={'ButtonsContainer'}>
-                            <div><img src={'../../assets/KanbanPage/DownloadFile.png'}/></div>
+                            <div><a href={data[0].preview} download={data[0].path}><img src={'../../assets/KanbanPage/DownloadFile.png'}/></a></div>
                             <div><img onClick={CloseModal} src={'../../assets/KanbanPage/CancelModal.png'}/></div>
                         </div>
                     </div>
@@ -87,12 +87,12 @@ export default function ModalImage({State, ChangeState, data}) {
                             <iframe
                                 src={data[0].preview}
                                 width="100%"
-                                height="500px"
+                                height="100%"
                                 title="PDF Viewer"
                             ></iframe>
                         )}
                     </div>
-                </div>
+                </div> : '' }
             </Modal>
         </div>
     )

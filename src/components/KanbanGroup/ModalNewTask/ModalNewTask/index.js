@@ -23,7 +23,7 @@ export default function ModalNewTask({ModalState, ChangeState}) {
             bottom: 'auto',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
-            backgroundColor: 'transparent'
+            backgroundColor: 'transparent',
         },
     };
 
@@ -33,6 +33,14 @@ export default function ModalNewTask({ModalState, ChangeState}) {
     const team = teams.find(team => team.team.id === user.teamId)
     const [TaskName, SetNameTask] = useState('Nova Tarefa')
     const [OpenFile, SetOpenFile] = useState(false)
+
+    const [Task, SetValuesTask] = useState([])
+
+    const [GetInpuSection, SetInpuSection] = useState({})
+
+    function ShowInfo(){
+        console.log("Teste1", GetInpuSection)
+    }
 
     function ChangeModalState() {
         ChangeState(!ModalState)
@@ -81,12 +89,13 @@ export default function ModalNewTask({ModalState, ChangeState}) {
                                     <input onChange={HandleName} value={TaskName}/>
                                     <img onClick={ChangeModalState} src={'../../assets/KanbanPage/Cancel.png'}/>
                                 </div>
-                                <IconsInput />
+                                <IconsInput  />
                             </div>
                             <div className={'MidTask'}>
                                 <DescriptionSection />
                                 <FilesSection />
                                 <SubTarefasSection/>
+                                <div onClick={ShowInfo}>Teste</div>
                             </div>
                         </div>
                     </div>

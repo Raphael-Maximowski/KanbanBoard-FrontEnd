@@ -6,9 +6,12 @@ import ModalImage from "../../ModalShowFIle";
 export default  function FilesSection(){
     const [OpenFile, SetOpenFile] = useState(false)
     const [files, setFiles] = useState([]);
+    const [ShowFile, SetShowFile] =  useState(undefined)
 
-    function OpenModalFile(){
+    function OpenModalFile(file){
         SetOpenFile(!OpenFile)
+        console.log("Arquivo Escolhido", file)
+        SetShowFile(file)
     }
 
     return (
@@ -21,14 +24,14 @@ export default  function FilesSection(){
 
             <div className={'FileContainer'}>
                 {files.map(file => (
-                    <>
-                        <div onClick={OpenModalFile} key={file.path} className={'file-previews'}>
+                    <div key={file.path}>
+                        <div onClick={() => OpenModalFile(file)} className={'file-previews'}>
                             <img className={'ImgPreview'} src={'../../assets/KanbanPage/File.png'}/>
                         </div>
-                        <ModalImage data={file} State={OpenFile} ChangeState={SetOpenFile}/>
-                    </>
+                    </div>
                 ))}
             </div>
+            <ModalImage data={ShowFile} State={OpenFile} ChangeState={SetOpenFile}/>
         </div>
     )
 }

@@ -11,7 +11,6 @@ function FilesContentInput({setter, value}) {
                 preview: URL.createObjectURL(file)
             }));
             setter(prevImages => [...prevImages, newFiles]);
-            console.log("Image Array: ", value)
         }
     });
 
