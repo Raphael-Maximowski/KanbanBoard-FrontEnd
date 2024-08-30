@@ -1,0 +1,70 @@
+.BodyCard {
+    cursor: pointer;
+    height: 180px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #B2B9BF;
+    margin: 20px 0px;
+    padding: 0px 20px;
+}
+
+.Title h4 {
+    font-size: 17px;
+    margin: 20px 0px;
+    font-family: Ubuntu;
+}
+
+.Description p {
+    font-family: Ubuntu;
+    font-weight: 200;
+    font-size: 15px;
+    color: #7a7979;
+}
+
+.ExtraFeatures {
+    border-top: 1px solid #b2b9bf;
+    margin-top: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.ExtraFeatures img {
+    width: 21px;
+    margin-right: 10px;
+}
+
+.Icons1 {
+
+    font-family: Ubuntu;
+    font-weight: 200;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+
+.ContentExtra {
+    display: flex;
+}
+
+.ContentExtra p{
+    margin-right: 10px;
+    font-size: 16px;
+    color: #7a7979;
+}
+
+.Icons2 {
+    font-family: Ubuntu;
+    font-weight: 200;
+    font-size: 18px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 150px;
+}
+
+.Date {
+    font-size: 15px;
+    color: #7a7979;
+}

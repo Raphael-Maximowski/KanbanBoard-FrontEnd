@@ -1,0 +1,66 @@
+.custom-overlay3 {
+    background-color: rgba(0, 0, 0, 0.18); /* Verde com 85% de opacidade */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Certifique-se de que o overlay fique acima de outros elementos */
+    transition: opacity 0.5s ease;
+}
+
+.AnimationContainer3 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideDown 0.8s ease-out forwards;
+}
+.ModalImage {
+    margin: 0px 50px;
+    border-radius: 10px;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ModalImage img {
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.ModalImage video {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 20px;
+}
+
+.ButtonsFiles {
+    padding-top: 100px;
+    padding-right: 100px;
+    justify-content: end;
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.ButtonsContainer {
+    display: flex;
+}
+
+.ButtonsContainer img {
+    width: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+
+}
+
+

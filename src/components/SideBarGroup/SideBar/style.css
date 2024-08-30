@@ -1,0 +1,59 @@
+.SideBarContainer {
+    width: 14vw;
+    min-width: 220px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.HeadSideBar {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeadSideBar h2 {
+    font-family: Ubuntu;
+    font-weight: 500;
+    font-size:35px;
+    color: #4289db;
+}
+
+.HeadSideBar h3 {
+    font-family: Ubuntu;
+    font-weight: 300;
+    letter-spacing: 15px;
+    font-size:25px;
+    color: #4289db;
+}
+
+.ContentContainer {
+    width: 14vw;
+    min-width: 220px;
+    height: 85vh;
+    padding-top: 0px;
+}
+
+.ContentSections{
+    margin: 0px 25px;
+}
+
+.TitleSection h4 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0px 40px;
+    color: #4289db;
+}
+
+.TeamContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.TeamContainer img {
+    width: 30px;
+    height: 30px;
+}

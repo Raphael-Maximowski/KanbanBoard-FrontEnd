@@ -1,0 +1,73 @@
+{
+  "input": [
+    {
+      "id" : 1,
+      "name": "Status",
+      "path" : "../../assets/KanbanBoard/status.png",
+      "input" : "select",
+      "selector" : [
+        {
+          "name" : "Pendências"
+        },
+        {
+          "name" : "Inicializando"
+        },
+        {
+          "name" : "Avançadas"
+        },
+        {
+          "name" : "Finalizadas"
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "name": "Data",
+      "path" : "../../assets/SideBar/Callendar.png",
+      "input" : "date"
+    },
+    {
+      "id" : 3,
+      "name": "Duração",
+      "path" : "../../assets/KanbanBoard/stopwatch.png",
+      "input" : "date"
+    },
+    {
+      "id" : 4,
+      "name": "Tags",
+      "path" : "../../assets/KanbanBoard/tag.png",
+      "input" : "text"
+    },
+    {
+      "id" : 5,
+      "name": "Prioridade",
+      "path" : "../../assets/KanbanBoard/IconFlag.png",
+      "input" : "select",
+      "selector" : [
+        {
+          "name" : "Urgente",
+          "path" : "../../assets/KanbanBoard/RedFlag.png"
+        },
+        {
+          "name" : "Alta",
+          "path" : "../../assets/KanbanBoard/YellowFlag.png"
+        },
+        {
+          "name" : "Normal",
+          "path" : "../../assets/KanbanBoard/BlueFlag.png"
+        },
+        {
+          "name" : "Baixa",
+          "path" : "../../assets/KanbanBoard/GreyFlag.png"
+        }
+      ]
+    },
+    {
+      "id" : 6,
+      "name": "Atribuições",
+      "path" : "../../assets/KanbanBoard/user-profile.png",
+      "input" : "text"
+    }
+  ]
+}
+

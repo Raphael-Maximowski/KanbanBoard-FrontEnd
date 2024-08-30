@@ -1,0 +1,77 @@
+.HeaderContent {
+    height: 150px;
+    width: 86vw;
+    display: flex;
+}
+
+.Hello {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.Hello h1 {
+    font-family: Ubuntu;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.Hello h2 {
+    font-family: Ubuntu;
+    font-weight: 300;
+    color: grey;
+    font-size: 20px;
+}
+
+.SearchBar {
+    width: 43vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.SearchBar input {
+    font-size: 17px;
+    border: 0px;
+    width: 20.5vw;
+    padding: 10px 0px 10px 20px;
+    border-radius: 5px;
+}
+
+.SearchBar img {
+    position: absolute;
+    width: 25px;
+    margin-left: 3vw;
+    cursor: pointer;
+}
+
+.SearchBar button {
+    background-color: #007DFE;
+    border: 0px;
+    color: white;
+    padding: 13px 40px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Profile {
+    width: 17.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Notification {
+    width: 30px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.ProfilePicture {
+    width: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+}

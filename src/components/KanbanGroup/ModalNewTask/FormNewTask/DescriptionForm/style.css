@@ -1,0 +1,24 @@
+.MidTask label {
+    display: block;
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.DescriptionArea textarea  {
+    border: 1px solid grey;
+    width: 39vw;
+    height: 150px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+}
+
+textarea:focus {
+    filter: blur(0px); /* Isso desfoca a textarea quando em foco */
+}
+textarea {
+    transform: none; /* Remove qualquer transformação aplicada */
+}

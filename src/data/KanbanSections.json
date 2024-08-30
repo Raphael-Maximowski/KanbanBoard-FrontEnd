@@ -1,0 +1,21 @@
+{
+  "kanbansections": [
+    {
+      "id" : 1,
+      "name": "Pendências"
+    },
+    {
+      "id" : 2,
+      "name": "Em Andamento"
+    },
+    {
+      "id" : 3,
+      "name": "Avançadas"
+    },
+    {
+      "id" : 4,
+      "name": "Finalizadas"
+    }
+  ]
+}
+

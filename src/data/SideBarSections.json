@@ -1,0 +1,26 @@
+{
+  "section": [
+    {
+      "id" : 1,
+      "name": "DashBoard",
+      "active": "../../assets/SideBar/ActiveDash.png",
+      "disable": "../../assets/SideBar/Dash.png",
+      "path": "/"
+    },
+    {
+      "id" : 2,
+      "name": "Kanban",
+      "active": "../../assets/SideBar/ActiveKanban.png",
+      "disable": "../../assets/SideBar/Kanban.png",
+      "path": "/Kanban"
+    },
+    {
+      "id" : 3,
+      "name": "Calendário",
+      "active": "../../assets/SideBar/ActiveCallendar.png",
+      "disable": "../../assets/SideBar/Callendar.png",
+      "path": "/Calendario"
+    }
+  ]
+}
+

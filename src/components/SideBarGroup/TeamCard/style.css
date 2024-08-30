@@ -1,0 +1,29 @@
+.ContainerTeam {
+    margin: 20px 30px;
+    padding: 8px 0px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ContainerTeam img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.ContainerTeam h5 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.DisableColor {
+    color: #bebec8;
+}
+
+.ActiveColor {
+    color: #4289db;
+}

@@ -1,0 +1,48 @@
+.Files {
+    margin-top: 30px;
+
+}
+
+.AnexosInput {
+    display: flex;
+    align-items: center;
+}
+
+.Files textarea{
+    outline: none;
+    margin-right: 20px;
+    width: 36vw;
+    border: 1px solid #7a7979;
+    padding: 8px ;
+    border-radius: 5px;
+    height: 16px;
+    font-family: Ubuntu;
+}
+
+.file-previews {
+    cursor: pointer;
+    border: 1px solid #7a7979;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    margin-top: 20px;
+    height: 65px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.file-previews:hover {
+    background-color: rgba(189, 184, 184, 0.28);
+}
+
+.file-previews img {
+    height: 40px;
+    width: 40px;
+}
+
+.FileContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+}

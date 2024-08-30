@@ -1,0 +1,5 @@
+.IconsContainer {
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+}

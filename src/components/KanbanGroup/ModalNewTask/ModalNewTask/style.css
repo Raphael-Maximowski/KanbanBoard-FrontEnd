@@ -1,0 +1,82 @@
+.custom-overlay2 {
+    background-color: rgba(0, 0, 0, 0.18); /* Verde com 85% de opacidade */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Certifique-se de que o overlay fique acima de outros elementos */
+    transition: opacity 0.5s ease;
+}
+
+.AnimationContainer2 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+.ContentModalTask {
+    margin: 0px 50px;
+}
+
+.ModalTask {
+    margin: 0px 50px;
+    border-radius: 10px;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    background-color: white;
+    box-shadow:     0 1px 2px rgba(0, 0, 0, 0.07),   /* Sombra mais próxima e nítida */
+    0 2px 4px rgba(0, 0, 0, 0.1),  /* Sombra um pouco mais afastada */
+    0 4px 8px rgba(0, 0, 0, 0.07),   /* Sombra ainda mais distante */
+    0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais difusa e distante */
+}
+
+.ModalContent {
+    padding: 0px 50px;
+    overflow-y: auto;
+
+}
+
+.path {
+    font-size: 16px;
+    font-family: Ubuntu;font-weight: 200;
+    color: #7a7979;
+    height: 50px;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+}
+
+.NameTask input {
+    outline: none;
+    border: 0px;
+    font-size: 27px;
+    font-family: Ubuntu;
+    cursor: pointer;
+}
+
+.NameTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NameTask img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.MidTask {
+    margin-top: 30px;
+    padding-bottom: 50px;
+
+}
+

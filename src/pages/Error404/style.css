@@ -1,0 +1,60 @@
+.BodyError {
+    width: 100vw;
+    height: 100vh;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContainerError {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Block1, .Block2 {
+    width: 40vw;
+}
+
+.Block1 img {
+    width: 40vw;
+}
+
+.Block2 {
+
+}
+
+.Block2 h1 {
+    font-size: 200px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 900;
+    color: #007DFE;
+    text-align: center;
+}
+
+.Block2 h2 {
+    font-size: 50px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    color: #007DFE;
+    text-align: center;
+}
+.ButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ButtonContainer button {
+    margin-top: 40px;
+    text-align: center;
+    border: 0px;
+    color: lightgray;
+    background-color: #007DFE;
+    font-size: 35px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+

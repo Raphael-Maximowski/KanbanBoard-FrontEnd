@@ -1,0 +1,131 @@
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.AnimationContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+.custom-overlay {
+    background-color: rgba(0, 0, 0, 0.18); /* Verde com 85% de opacidade */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Certifique-se de que o overlay fique acima de outros elementos */
+    transition: opacity 0.5s ease;
+}
+
+
+.ModalTeam {
+    border-radius: 20px;
+    background-color: white;
+    width: 50vw;
+    height: 350px;
+    padding-bottom: 40px;
+    box-shadow:     0 1px 2px rgba(0, 0, 0, 0.07),   /* Sombra mais próxima e nítida */
+    0 2px 4px rgba(0, 0, 0, 0.1),  /* Sombra um pouco mais afastada */
+    0 4px 8px rgba(0, 0, 0, 0.07),   /* Sombra ainda mais distante */
+    0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais difusa e distante */
+}
+
+.ContentModal {
+    padding: 30px 50px;
+}
+.ContentHeaderModal {
+    width: 40vw;
+}
+
+.HeaderModal {
+    display: flex;
+    height: 70px;
+}
+
+.HeaderModal h2 {
+    font-family: Ubuntu;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #007DFE;
+}
+
+.HeaderModal p {
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 20px;
+    color: #7a7979;
+}
+
+.ImgModal {
+    width: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeaderModal img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.ContentModal label {
+    font-size: 18px;
+    display: block;
+    margin-top: 25px;
+    font-family: Ubuntu;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007DFE;
+}
+
+.ContentModal input {
+    border: 1px solid grey;
+    width: 35vw;
+    padding: 10px 0px 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.ContentModal button {
+    margin-top: 25px;
+    font-size: 17px;
+    font-family: Ubuntu;
+    padding: 12px 40px;
+    background-color: #007DFE;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.flatpickr-calendar {
+    font-family: 'SuaFontePersonalizada', sans-serif;
+}
+
+.flatpickr-day, .flatpickr-weekday {
+    font-family: 'SuaFontePersonalizada', sans-serif;
+}
+
+.flatpickr-time {
+    font-family: 'SuaFontePersonalizada', sans-serif;
+}
+
+
+
