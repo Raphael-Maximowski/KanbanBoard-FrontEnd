@@ -34,7 +34,7 @@
     },
     {
       "id" : 4,
-      "name": "Tags",
+      "name": "Tag",
       "path" : "../../../assets/KanbanPage/tag.png",
       "input" : "text"
     },

@@ -39,7 +39,7 @@
 }
 
 .ModalContent {
-    padding: 0px 50px;
+    padding: 0vw 4.3vw;
     overflow-y: auto;
 
 }
@@ -55,6 +55,7 @@
 }
 
 .NameTask input {
+    width: 20vw;
     outline: none;
     border: 0px;
     font-size: 27px;
@@ -63,6 +64,8 @@
 }
 
 .NameTask {
+    width: 40vw;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,5 +81,16 @@
     margin-top: 30px;
     padding-bottom: 50px;
 
+}
+
+.TopTask button {
+    background-color: #007DFE;
+    border: 0px;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
 }
 

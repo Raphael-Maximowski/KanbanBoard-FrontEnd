@@ -34,15 +34,16 @@
 .SearchBar input {
     font-size: 17px;
     border: 0px;
-    width: 20.5vw;
+    width: 21.4vw;
     padding: 10px 0px 10px 20px;
     border-radius: 5px;
+    background-color: white;
 }
 
 .SearchBar img {
     position: absolute;
     width: 25px;
-    margin-left: 3vw;
+    margin-left: 4vw;
     cursor: pointer;
 }
 
