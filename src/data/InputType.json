@@ -7,16 +7,20 @@
       "input" : "select",
       "selector" : [
         {
-          "name" : "Pendências"
+          "name" : "Pendências",
+          "id" : 1
         },
         {
-          "name" : "Inicializando"
+          "name" : "Inicializando",
+          "id" : 2
         },
         {
-          "name" : "Avançadas"
+          "name" : "Avançadas",
+          "id" : 3
         },
         {
-          "name" : "Finalizadas"
+          "name" : "Finalizadas",
+          "id" : 4
         }
       ]
     },

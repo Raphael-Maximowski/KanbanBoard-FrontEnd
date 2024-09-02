@@ -8,7 +8,6 @@ const TaskSlice = createSlice({
     reducers: {
         AddTask: (state, {payload}) => {
             state.push(payload)
-            console.log("Task Recebida", payload)
         }
     }
 })
