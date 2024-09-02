@@ -13,6 +13,7 @@ export default function IconsInput({SetterInfo, Active}) {
     const [Tags, SetTag] = useState('Vazio')
     const [Prioridade, SetPrioridade] = useState('Vazio')
     const [Atribuicao, SetAtribuicao] = useState('Vazio')
+    const [KanbanID, SetKanbanID] =  useState()
 
 
     const Setter = [
@@ -37,6 +38,7 @@ export default function IconsInput({SetterInfo, Active}) {
         if (Active) {
             const InputValues =
                 {
+                        Id: KanbanID,
                         Status: Status,
                         Data: Data,
                         Time: Time,
@@ -60,7 +62,8 @@ export default function IconsInput({SetterInfo, Active}) {
                         .map((FilterData, index) => {
                             return <InputSection value={Values[(FilterData.id) - 1]}
                                                  setter={Setter[(FilterData.id) - 1]}
-                                                 key={index} data={FilterData}/>;
+                                                 key={index} data={FilterData}
+                                                 kanbanid={SetKanbanID}/>;
                         })
                 }
             </div>
@@ -72,7 +75,8 @@ export default function IconsInput({SetterInfo, Active}) {
                         .map((FilterData, index) => {
                             return <InputSection value={Values[(FilterData.id) - 1]}
                                                  setter={Setter[(FilterData.id) - 1]}
-                                                 key={index} data={FilterData}/>;
+                                                 key={index} data={FilterData}
+                                                 kanbanid={SetKanbanID}/>;
                         })
                 }
             </div>

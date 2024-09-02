@@ -4,7 +4,7 @@ import {toast, ToastContainer} from "react-toastify";
 import Flatpickr from 'react-flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
-export default function InputSection({data, setter, value}){
+export default function InputSection({data, setter, value, kanbanid}){
 
     const [InputMode, SetInputMode] =  useState(false)
 
@@ -49,6 +49,14 @@ export default function InputSection({data, setter, value}){
         setter(timeString)
     };
 
+    function HandleSelectData(event){
+        const selectedOption = JSON.parse(event.target.value);
+        setter(selectedOption.name)
+        if (selectedOption.id !== undefined) {
+            kanbanid(selectedOption.id)
+        }
+    }
+
 
     return(
         <>
@@ -77,9 +85,9 @@ export default function InputSection({data, setter, value}){
                                             onChange={handleTimeChange}
                                         />
                                         : <div >
-                                            <select onClick={handleData} className={'select-box'}>
+                                            <select onClick={HandleSelectData} className={'select-box'}>
                                                 {options.map((option, index) => {
-                                                    return <option value={option.name} key={index}>{option.name}</option>})}
+                                                    return <option value={JSON.stringify(option)}  key={index}>{option.name}</option>})}
                                             </select>
                                           </div>
                             }

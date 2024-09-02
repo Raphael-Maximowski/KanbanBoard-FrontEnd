@@ -10,6 +10,7 @@ import DescriptionSection from "../FormNewTask/DescriptionForm";
 import FilesSection from "../FormNewTask/FilesSectionForm";
 import ModalImage from "../ModalShowFIle";
 import {AddTask} from "../../../../store/reducers/tasks";
+import KanbanSections from "../../../../data/KanbanSections.json"
 
 export default function ModalNewTask({ModalState, ChangeState}) {
 
