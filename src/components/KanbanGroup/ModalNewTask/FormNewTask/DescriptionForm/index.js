@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 
 export default function DescriptionSection({Active, SetterInfo}){
 
-    const [Description, SetDescription] = useState("")
+    const [Description, SetDescription] = useState(null)
     function handleDescription(event) {
         SetDescription(event.target.value)
     }
@@ -13,7 +13,6 @@ export default function DescriptionSection({Active, SetterInfo}){
             const DescriptionValue = {
                 Description : Description
             }
-
             SetterInfo(DescriptionValue)
         }
     }, [Active]);
@@ -21,7 +20,7 @@ export default function DescriptionSection({Active, SetterInfo}){
     return (
         <div className={'DescriptionArea'}>
             <label>Descrição Completa da Tarefa</label>
-            <textarea onChange={handleDescription} value={Description}
+            <textarea onChange={handleDescription}
                       placeholder="Descreva o passo a passo para sua atividade..."></textarea>
         </div>
 

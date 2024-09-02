@@ -36,7 +36,6 @@ export default function Header(){
                     <img onClick={alert} className={'ProfilePicture'} src={'../../assets/Header/user.png'}/>
             </div>
             <ModalNewTeam ModalState={ModalState} CloseModal={SetModalState}/>
-            <ToastContainer />
         </div>
     )
 }

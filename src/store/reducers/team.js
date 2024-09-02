@@ -20,6 +20,7 @@ const TeamSlice = createSlice({
     reducers: {
         AddList: (state, { payload }) => {
             state[0].push(payload)
+            console.log("Chegou no Payload")
         },
         ChangeModalState: (state, { payload }) => {
             state[1] = payload

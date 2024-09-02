@@ -3,8 +3,6 @@ import {useEffect, useState} from "react";
 import {toast, ToastContainer} from "react-toastify";
 import Flatpickr from 'react-flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import Select from 'react-select'
-
 
 export default function InputSection({data, setter, value}){
 
@@ -33,6 +31,25 @@ export default function InputSection({data, setter, value}){
         event.stopPropagation();
     }
 
+    const handleDateChange = ([selectedDate]) => {
+        const formattedDate = selectedDate.toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+        setter(formattedDate);
+    };
+
+    const handleTimeChange = ([selectedDate]) => {
+        const date = new Date(selectedDate);
+
+        const hours = date.getHours().toString().padStart(2, '0');  // Adiciona zero à esquerda, se necessário
+        const minutes = date.getMinutes().toString().padStart(2, '0');  // Adiciona zero à esquerda, se necessário
+        const timeString = `${hours}:${minutes}`;
+        setter(timeString)
+    };
+
+
     return(
         <>
             <div onClick={ActiveInput} className={'InputContainer'}>
@@ -49,9 +66,7 @@ export default function InputSection({data, setter, value}){
 
                                         onClick={handleInputClick}
                                         options={{ enableTime: false, minDate: minDate, dateFormat: 'd/m/y'}}
-                                        onChange={([selectedDate]) => {
-                                            setter(selectedDate);
-                                        }}
+                                        onChange={handleDateChange}
                                     />
 
                                     : data.input === "date" && data.name === "Duração" ?
@@ -59,9 +74,7 @@ export default function InputSection({data, setter, value}){
                                             value={"00:00"}
                                             onClick={handleInputClick}
                                             options={{ enableTime: true, noCalendar: true,  dateFormat: 'H:i',  time_24hr: true, }}
-                                            onChange={([selectedDate]) => {
-                                                setter(selectedDate);
-                                            }}
+                                            onChange={handleTimeChange}
                                         />
                                         : <div >
                                             <select onClick={handleData} className={'select-box'}>
@@ -72,7 +85,6 @@ export default function InputSection({data, setter, value}){
                             }
                         </div>}
                 </div>
-                <ToastContainer />
             </div>
         </>
     )

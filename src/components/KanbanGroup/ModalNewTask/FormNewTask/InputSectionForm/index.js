@@ -34,7 +34,6 @@ export default function IconsInput({SetterInfo, Active}) {
     ]
 
     useEffect(() => {
-        console.log("Ativado Use Effect")
         if (Active) {
             const InputValues =
                 {

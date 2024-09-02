@@ -110,7 +110,6 @@ export default function ModalNewTeam({ModalState, CloseModal}) {
                     </div>
                 </div>
             </Modal>
-            <ToastContainer />
         </div>
     )
 }

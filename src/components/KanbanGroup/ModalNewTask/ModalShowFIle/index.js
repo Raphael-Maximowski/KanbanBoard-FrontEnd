@@ -24,7 +24,6 @@ export default function ModalImage({State, ChangeState, data}) {
             || type === 'svg'
             || type === 'ebp') {
             SetType('Image')
-            console.log("Setado como Imagem")
         } else if (
             type === 'mp4'
             || type === 'ebm'
@@ -32,7 +31,6 @@ export default function ModalImage({State, ChangeState, data}) {
             || type === 'avi'
             || type === 'mov') {
             SetType('Video')
-            console.log("Setado como Video")
         } else {SetType('PDF')}
     }
 

@@ -7,34 +7,40 @@ export default  function FilesSection({SetterInfo, Active}){
     const [OpenFile, SetOpenFile] = useState(false)
     const [files, setFiles] = useState([]);
     const [ShowFile, SetShowFile] =  useState(undefined)
+    const [Anexos, SetAnexos] =  useState()
 
     function OpenModalFile(file){
         SetOpenFile(!OpenFile)
-        console.log("Arquivo Escolhido", file)
         SetShowFile(file)
+    }
+
+    function HandleAnexos(event){
+        SetAnexos(event.target.value)
     }
 
     useEffect(() => {
         if (Active) {
             const ContentFiles = {
-                    files: files
+                    files: files,
+                    anexos: Anexos
             }
 
             SetterInfo(ContentFiles)
         }
     }, [Active]);
 
+
     return (
         <div className={'Files'}>
             <label>Anexos</label>
             <div className="AnexosInput">
-                <textarea placeholder={"Insira seus Links ou Arquivos"}/>
+                <textarea onChange={HandleAnexos} placeholder={"Insira seus Links ou Arquivos"}/>
                 <FilesContentInput value={files} setter={setFiles}/>
             </div>
 
             <div className={'FileContainer'}>
-                {files.map(file => (
-                    <div key={file.path}>
+                {files.map((file, index) => (
+                    <div key={index}>
                         <div onClick={() => OpenModalFile(file)} className={'file-previews'}>
                             <img className={'ImgPreview'} src={'../../assets/KanbanPage/File.png'}/>
                         </div>
