@@ -1,5 +1,5 @@
 .BodyKanbanSection {
-
+    overflow-y: auto;
     width: 18vw;
     height: 73vh;
 }

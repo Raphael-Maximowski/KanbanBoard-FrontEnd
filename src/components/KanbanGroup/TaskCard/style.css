@@ -6,65 +6,109 @@
     border: 1px solid #B2B9BF;
     margin: 20px 0px;
     padding: 0px 20px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.Title h4 {
-    font-size: 17px;
-    margin: 20px 0px;
+.TitleTask {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: flex;
+
+;
+}
+
+.TitleTask h4 {
+    font-size: 18px;
     font-family: Ubuntu;
 }
 
-.Description p {
+.TitleTask img {
+    width: 50px;
+}
+
+.DescriptionTask {
+    color: #7a7979;
     font-family: Ubuntu;
     font-weight: 200;
+    height: 38px;
+}
+
+.TopContent{
+    height: 125px;
+
+}
+
+.BottomPart {
+
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.BottomPart img {
+    width: 20px;
+    margin: 20px;
+}
+
+
+.TaskDate{
+    display: flex;
+    align-items: center;
+    font-family: Ubuntu;
     font-size: 15px;
     color: #7a7979;
 }
 
-.ExtraFeatures {
-    border-top: 1px solid #b2b9bf;
-    margin-top: 20px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-}
-
-.ExtraFeatures img {
-    width: 21px;
-    margin-right: 10px;
-}
-
-.Icons1 {
-
+.Urgency {
+    width: 60px;
     font-family: Ubuntu;
-    font-weight: 200;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    width: 150px;
+    color: red;
+    font-size: 15px;
+    border: 1px solid red;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.ContentExtra {
-    display: flex;
-}
-
-.ContentExtra p{
-    margin-right: 10px;
-    font-size: 16px;
-    color: #7a7979;
-}
-
-.Icons2 {
+.High {
     font-family: Ubuntu;
-    font-weight: 200;
-    font-size: 18px;
+    color: orangered;
+    font-size: 15px;
+    border: 1px solid orangered;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.Normal {
+    font-family: Ubuntu;
+    color: green;
+    font-size: 15px;
+    border: 1px solid green;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.Baixo {
+    font-family: Ubuntu;
+    color: lightseagreen;
+    font-size: 14px;
+    border: 1px solid lightseagreen;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.Flag img {
+    width: 50px;
+    margin-right:20px;
+    height: 50px;
+    position: sticky;
+}
+
+.Flag {
+    position: absolute;
+    width: 17vw;
+    height: 50px;
     display: flex;
     justify-content: end;
-    align-items: center;
-    width: 150px;
-}
-
-.Date {
-    font-size: 15px;
-    color: #7a7979;
 }
