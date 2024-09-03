@@ -38,7 +38,6 @@ export default function ModalNewTask({ModalState, ChangeState}) {
 
     const user = useSelector(state => state.User)
     let teams = useSelector(state => state.Team)
-    const tasks = useSelector(state => state.Task)
 
     teams = teams[0]
     const team = teams.find(team => team.team.id === user.teamId)
@@ -86,6 +85,9 @@ export default function ModalNewTask({ModalState, ChangeState}) {
                 } if (FinalTask.GetInpuSection.Data === "Vazio") {
                     errorparameter = true
                     SetError(prevError => [...prevError, "Insira uma Data"]);
+                } if (FinalTask.GetInpuSection.Tags === "Vazio") {
+                    errorparameter = true
+                    SetError(prevError => [...prevError, "Insira uma Tag"]);
                 } if (FinalTask.GetDescription.Description === null) {
                     errorparameter = true
                     SetError(prevError => [...prevError, "Insira uma Descrição"]);

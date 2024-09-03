@@ -24,7 +24,13 @@ export default function InputSection({data, setter, value, kanbanid}){
     }
 
     function handleData(event) {
-        setter(event.target.value)
+        if (data.name === "Tag" && event.target.value.length > 10) {
+            toast.error("Insira uma Tag de até 10 Caracteres!", {
+                position: "bottom-right",
+                autoClose: 5000
+            })
+        } else { setter(event.target.value) }
+
     }
 
     function handleInputClick(event) {
@@ -42,7 +48,6 @@ export default function InputSection({data, setter, value, kanbanid}){
 
     const handleTimeChange = ([selectedDate]) => {
         const date = new Date(selectedDate);
-
         const hours = date.getHours().toString().padStart(2, '0');  // Adiciona zero à esquerda, se necessário
         const minutes = date.getMinutes().toString().padStart(2, '0');  // Adiciona zero à esquerda, se necessário
         const timeString = `${hours}:${minutes}`;
