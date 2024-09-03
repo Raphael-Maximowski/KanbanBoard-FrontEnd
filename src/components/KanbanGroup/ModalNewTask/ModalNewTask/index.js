@@ -10,11 +10,16 @@ import DescriptionSection from "../FormNewTask/DescriptionForm";
 import FilesSection from "../FormNewTask/FilesSectionForm";
 import ModalImage from "../ModalShowFIle";
 import {AddTask} from "../../../../store/reducers/tasks";
-import KanbanSections from "../../../../data/KanbanSections.json"
 
 export default function ModalNewTask({ModalState, ChangeState}) {
 
     const dispatch = useDispatch()
+
+    const TasksCreated = useSelector(state => state.Task)
+
+    useEffect(() => {
+        console.log("Team DashBoard: ", TasksCreated)
+    }, [TasksCreated])
 
     const customStyles2 = {
         content: {
@@ -46,12 +51,15 @@ export default function ModalNewTask({ModalState, ChangeState}) {
     const [GetFiles, SetFiles] = useState(null)
     const [GetSubTasks, SetSubTask] = useState(null)
     const [GetValue, ActiveState] = useState(false)
-
     const [FinalTask, SetFinalTask] = useState('')
+    const [UserId, SetUserId] = useState()
+    const User =  useSelector(state => state.User)
 
     // Atualizar FinalTask sempre que qualquer um dos estados relevantes mudar
     useEffect(() => {
+        SetUserId(User.teamId)
         const TaskFinal = {
+            UserId,
             TaskName,
             GetInpuSection,
             GetDescription,
@@ -89,6 +97,7 @@ export default function ModalNewTask({ModalState, ChangeState}) {
                 ActiveState(!GetValue)
 
                 if (errorparameter === false) {
+                    console.log("Final Task Anexada!")
                     dispatch(AddTask(FinalTask))
                     ChangeModalState()
                     toast.success("Tarefa Criada!", {
